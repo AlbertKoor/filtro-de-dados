@@ -80,3 +80,21 @@ const data = [
     ],
   },
 ];
+
+
+const hotelBrazil = data.filter(hotel => hotel.country === "Brasil");
+//console.log(hotelBrazil);
+
+
+const hotelPrice = data.filter(hotel => hotel.price >= 200)
+//console.log(hotelPrice);
+
+const hotelOpen = data.filter(hotel => hotel.isOpen == true)
+//console.log(hotelOpen);
+
+const hotelName = data.filter(hotel => hotel.name == "Copacabana Palace")
+console.log(hotelName);
+
+const copacabanaHotel = data.find(hotel => hotel.name === "Copacabana Palace");
+const copacabanaDates = copacabanaHotel.toBook.filter(book => book.isAvailable === true);
+console.log(copacabanaDates);
